@@ -1,0 +1,6 @@
+﻿  oop prac.cpp
+C:\Users\Eli PC\source\repos\oop prac\oop prac\oop prac.cpp(37,25): error C3867: 'Shape::RectArea': non-standard syntax; use '&' to create a pointer to member
+C:\Users\Eli PC\source\repos\oop prac\oop prac\oop prac.cpp(37,25): fatal error C1903: unable to recover from previous error(s); stopping compilation
+  INTERNAL COMPILER ERROR in 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\CL.exe'
+      Please choose the Technical Support command on the Visual C++
+      Help menu, or open the Technical Support help file for more information
