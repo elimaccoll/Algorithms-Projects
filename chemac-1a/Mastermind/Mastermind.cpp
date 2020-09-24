@@ -168,6 +168,9 @@ int code::checkIncorrect(code guess)
 		}
 	}
 
+	// reset 'numCode' to be the originally generated code
+	numCode = numCodeCopy;
+
 	// returns value of the counter, this is the second value in the computer's
 	// response when entering a guess
 	return ci;
