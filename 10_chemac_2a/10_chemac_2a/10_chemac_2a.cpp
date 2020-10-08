@@ -1,77 +1,136 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
-class card {
-public:						
-	string value, suit;	
+template <typename T>
+class deck;
 
+template <typename T>
+class card {
+friend class deck<T>;
+public:
 	card();
-	card(string, string);
-	void setValue(string);
-	void setSuit(string);
-	string getValue();
-	string getSuit();
-	void operator<<(card);
+	card(T, T);
+	void setValue(T);
+	void setSuit(T);
+	T getValue();
+	T getSuit();
+	friend ostream& operator<<(ostream& os, const card<T>& c)
+	{
+		return os << "Card: " << c.value << " " << c.suit<<endl;
+	}
+	card* next;
+private:
+	T value, suit;
 };
-card::card() {		//default constructor
+
+template <typename T>
+card<T>::card() {		//default constructor
 	value = "2";
-	suit = "club";
+	suit = "Clubs";
 }
-card::card(string v, string s) {		//constructor that sets value and suit
+
+template <typename T>
+card<T>::card(T v, T s) {	//constructor that sets value and suit
 	value = v;
 	suit = s;
+	next = NULL;
 }
-void card::setValue(string v) {	//sets card value
+
+template <typename T>
+void card<T>::setValue(T v) {	//sets card value
 	value = v;
 }
-string card::getValue() {		//returns card value
+
+template <typename T>
+T card<T>::getValue() {		//returns card value
 	return value;
 }
-void card::setSuit(string s) {	//sets card suit
+
+template <typename T>
+void card<T>::setSuit(T s) {	//sets card suit
 	suit = s;
 }
-string card::getSuit() {	//returns card suit
+
+template <typename T>
+T card<T>::getSuit() {	//returns card suit
 	return suit;
 }
-void card::operator<<(card c) {	//overloaded << operator to print out card value and suit
-	value = c.getValue();
-	suit = c.getSuit();
-	cout << value << " " << suit << endl;
-}	
 //End class card functions
 
-struct node {
-	string value;
-	string suit;
-};
-
+template <typename T>
 class deck { 
 public:
-	deck* front;
-	deck* curr;
-	deck* next;
-
-	deck();	//constructor
-	void operator<<(deck);
-	void shuffle(deck);
+	deck();
+	~deck();
+	friend ostream& operator<<(ostream& os, const deck<T>& d)
+	{															
+		card<T>* print;
+		print = d.front;
+		while (print != NULL) {
+			os << print->getValue() << " " << print->getSuit()<<endl;
+			print = print->next;
+		}
+		return os;
+	}
+	//void shuffle();
+private:
+	card<T> *front;
+	card<T> *curr;
 };
-deck::deck() {
-	while (curr != NULL) {
-		node<card>* newNode;
 
+template <typename T>
+deck<T>::deck() {
+	front = NULL;
+	curr = front;
+	string suit, value;
+	vector<string> v = { "Ace", "King", "Queen", "Jack", "10", "9", "7", "6", "5", "4", "3", "2" };
+	vector<string> s= { "Club", "Diamond", "Heart", "Spade" };
+
+	for (int i = 0; i < s.size(); i++) {
+		suit = s[i];
+		for (int j = 0; j < v.size(); j++) {
+			value = v[j];
+			if (front == NULL) {
+				card<T>* ptr = new card<T>();
+				front = ptr;
+				curr = ptr;
+				curr->setSuit(suit);
+				curr->setValue(value);
+			}
+			else {
+				card<T>* ptr = new card<T>();
+				curr->next = ptr;
+				curr = ptr;
+				curr->setSuit(suit);
+				curr->setValue(value);
+			}
+		}
 	}
 }
 
+template <typename T>
+deck<T>::~deck(){
+	if (front!=NULL) // List is not empty
+	{
+		curr = front;
+		card<T>* tempPtr;
+
+		while (curr != NULL) // delete remaining nodes
+		{
+			tempPtr = curr;
+			curr = curr->next;
+			delete tempPtr;
+		}
+	}
+}
 
 int main()
 {
-	card test1("3", "spade");
-	test1 << test1;
+	card<string> c1;
+	cout << c1;
 
-	card test2;
-	test2 << test2;
-	test2.setValue("7");
-	test2.setSuit("heart");
-	test2 << test2;
+	deck<string> d;
+	cout << d;
 }

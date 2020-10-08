@@ -1,2 +1,19 @@
 ﻿  10_chemac_2a.cpp
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(84): message : while compiling class template member function 'deck<T>::deck(void)'
+          with
+          [
+              T=std::string
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(134): message : see reference to function template instantiation 'deck<T>::deck(void)' being compiled
+          with
+          [
+              T=std::string
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(134): message : see reference to class template instantiation 'deck<T>' being compiled
+          with
+          [
+              T=std::string
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(93,21): warning C4018: '<': signed/unsigned mismatch
   10_chemac_2a.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\Debug\10_chemac_2a.exe
