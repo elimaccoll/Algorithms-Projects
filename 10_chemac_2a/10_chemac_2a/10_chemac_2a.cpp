@@ -1,3 +1,8 @@
+// Project 2 - Part A
+// Anthony Cherubino, Eli MacColl
+// 
+// Main program file for Project 2 - Part A. Contains the code to generate a deck
+// of cards and shuffle it.
 #include <iostream>
 #include <string>
 #include <vector>
@@ -21,7 +26,7 @@ public:
 	T getSuit();
 	friend ostream& operator<<(ostream& os, const card<T>& c)	//overloads << operator to print out a single card's value and suit
 	{
-		return os <<c.value << " " << c.suit<<endl;
+		return os << "Card: " << c.value << " of " << c.suit << "s\n" << endl;
 	}
 	card* next;
 private:		
@@ -31,7 +36,7 @@ private:
 template <typename T>
 card<T>::card()		//default constructor
 {
-	value = "2";
+	value = "Ace";
 	suit = "Club";
 }
 
@@ -78,7 +83,7 @@ public:
 		card<T>* print;
 		print = d.front;
 		while (print != NULL) {			//iterates through deck while the pointer is pointing to a node with value and suit data
-			os << print->getValue() << " " << print->getSuit()<<endl;	//prints value and suit of card currently being pointed at
+			os << print->getValue() << " of " << print->getSuit() << "s" << endl;	//prints value and suit of card currently being pointed at
 			print = print->next;	//moves print pointer to point at the next card in the list
 		}
 		return os;
@@ -87,7 +92,7 @@ public:
 private:
 	card<T> *front;
 	card<T> *curr;
-	card<T>* prev;
+	card<T> *prev;
 };
 
 template <typename T>
@@ -96,7 +101,8 @@ deck<T>::deck() //constructor that creates a deck of cards in order
 	front = NULL;
 	curr = front;
 	string suit, value;
-	vector<string> v = { "Ace", "King", "Queen", "Jack", "10", "9", "8", "7", "6", "5", "4", "3", "2" };	//values used to create deck
+	vector<string> v = { "Ace", "2", "3", "4", "5", "6", "7", "8",
+						 "9", "10", "Jack", "Queen", "King" };	//values used to create deck
 	vector<string> s= { "Club", "Diamond", "Heart", "Spade" };	//suits used to create deck
 
 	for (int i = 0; i < s.size(); i++) {		//iterates through the vector of suits
@@ -119,7 +125,7 @@ deck<T>::deck() //constructor that creates a deck of cards in order
 }
 
 template <typename T>
-deck<T>::~deck()				//desctructor
+deck<T>::~deck()				//destructor
 {
 	if (front!=NULL)			//runs if the list is not empty
 	{
@@ -144,7 +150,7 @@ void deck<T>::shuffle()
 	int ran;
 	srand(time(NULL));
 
-	for (int x = 0; x <364; x++) {	// 364/52=7 so this shuffles through the deck 7 times
+	for (int x = 0; x < 364; x++) {	// 364/52=7 so this shuffles through the deck 7 times
 		ran = rand() % 52;
 		s = front;
 		curr = front;
@@ -159,8 +165,6 @@ void deck<T>::shuffle()
 		insert->next = curr;
 		prev->next = insert;
 		front = front->next;
-		delete s;
-		s = NULL;
 	}
 }
 
