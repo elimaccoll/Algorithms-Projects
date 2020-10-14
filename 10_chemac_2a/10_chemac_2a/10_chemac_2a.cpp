@@ -1,8 +1,3 @@
-// Project 2 - Part A
-// Anthony Cherubino, Eli MacColl
-// 
-// Main program file for Project 2 - Part A. Contains the code to generate a deck
-// of cards and shuffle it.
 #include <iostream>
 #include <string>
 #include <vector>
@@ -16,8 +11,9 @@ class deck;
 
 template <typename T>
 class card {
-	friend class deck<T>;
+friend class deck<T>;
 public:
+	card();
 	card(T, T);
 	void setValue(T);
 	void setSuit(T);
@@ -25,12 +21,19 @@ public:
 	T getSuit();
 	friend ostream& operator<<(ostream& os, const card<T>& c)
 	{
-		return os << "Card: " << c.value << " of " << c.suit << "s\n" << endl;
+		return os << "Card: " << c.value << " " << c.suit<<endl;
 	}
 	card* next;
 private:
 	T value, suit;
 };
+
+template <typename T>
+card<T>::card()		//default constructor
+{
+	value = "2";
+	suit = "Club";
+}
 
 template <typename T>
 card<T>::card(T v, T s)		//constructor that sets value and suit
@@ -46,7 +49,7 @@ void card<T>::setValue(T v)		//sets card value
 	value = v;
 }
 
-template <typename T>
+template <typename T>		
 T card<T>::getValue() //returns card value
 {
 	return value;
@@ -60,42 +63,40 @@ void card<T>::setSuit(T s) //sets card suit
 
 template <typename T>
 T card<T>::getSuit()	//returns card suit
-{
+{	
 	return suit;
 }
 //End class card functions
 
 template <typename T>
-class deck {
+class deck { 
 public:
 	deck();
 	~deck();
 	friend ostream& operator<<(ostream& os, const deck<T>& d)
-	{
+	{															
 		card<T>* print;
 		print = d.front;
-		os << "Deck:\n";
 		while (print != NULL) {
-			os << print->getValue() << " of " << print->getSuit() << "s" << endl;
+			os << print->getValue() << " " << print->getSuit()<<endl;
 			print = print->next;
 		}
 		return os;
 	}
-	void shuffle();
+	void shuffle(deck<T>&);
 private:
-	card<T>* front;
-	card<T>* curr;
+	card<T> *front;
+	card<T> *curr;
 };
 
 template <typename T>
-deck<T>::deck()
+deck<T>::deck() 
 {
 	front = NULL;
 	curr = front;
 	string suit, value;
-	vector<string> v = { "Ace", "2", "3", "4", "5", "6", "7", "8",
-						 "9", "10", "Jack", "Queen", "King" };
-	vector<string> s = { "Club", "Diamond", "Heart", "Spade" };
+	vector<string> v = { "Ace", "King", "Queen", "Jack", "10", "9", "7", "6", "5", "4", "3", "2" };
+	vector<string> s= { "Club", "Diamond", "Heart", "Spade" };
 
 	for (int i = 0; i < s.size(); i++) {
 		suit = s[i];
@@ -122,7 +123,7 @@ deck<T>::deck()
 template <typename T>
 deck<T>::~deck()
 {
-	if (front != NULL) // List is not empty
+	if (front!=NULL) // List is not empty
 	{
 		curr = front;
 		card<T>* tempPtr;
@@ -136,42 +137,37 @@ deck<T>::~deck()
 	}
 }
 
+
 template <typename T>
-void deck<T>::shuffle()
-// 
+void deck<T>::shuffle(deck<T>& d)	//causes memory error
 {
-	string origSuit, origValue, destSuit, destValue;
+	string suit, value;
+	card<T>* s = new card<T>;
+	s = d.front;
 	int ran;
 	srand(time(NULL));
-	cout << "Shuffling...\n" << endl;
 	for (int i = 0; i < 52; i++) {	//shuffles each card in the deck
-		curr = this->front;
-		for (int x = 0; x < i - 1; x++) {
-			curr = curr->next;
-		}
-		if (i > 0) {
-			curr->setSuit(destSuit);
-			curr->setValue(destValue);
-			curr = curr->next;
-		}
-		origSuit = curr->getSuit();
-		origValue = curr->getValue();
-		ran = rand() % 52;
-		curr = this->front;
+		ran = rand() % 52 + 1;
+		curr = d.front;
 		for (int j = 0; j < ran; j++) {	//move curr rand # of times
 			curr = curr->next;
+			curr->setValue(s->getValue());
+			curr->setSuit(s->getSuit());
+			s = front;
+			front = s->next;
+			delete s;
 		}
-		destSuit = curr->getSuit();
-		destValue = curr->getValue();
-		curr->setSuit(origSuit);
-		curr->setValue(origValue);
 	}
 }
 
 int main()
 {
+	card<string> c1;
+	cout << c1;
+
 	deck<string> d;
+	//cout << d << endl;
+	d.shuffle(d);
 	cout << d << endl;
-	d.shuffle();
-	cout << d << endl;
+
 }
