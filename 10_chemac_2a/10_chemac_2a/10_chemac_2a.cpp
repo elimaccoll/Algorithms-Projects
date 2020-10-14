@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> 
 using namespace std;
 
 template <typename T>
@@ -26,35 +29,41 @@ private:
 };
 
 template <typename T>
-card<T>::card() {		//default constructor
+card<T>::card()		//default constructor
+{
 	value = "2";
-	suit = "Clubs";
+	suit = "Club";
 }
 
 template <typename T>
-card<T>::card(T v, T s) {	//constructor that sets value and suit
-	value = v;
+card<T>::card(T v, T s)		//constructor that sets value and suit
+{
 	suit = s;
+	value = v;
 	next = NULL;
 }
 
 template <typename T>
-void card<T>::setValue(T v) {	//sets card value
+void card<T>::setValue(T v)		//sets card value
+{
 	value = v;
 }
 
-template <typename T>
-T card<T>::getValue() {		//returns card value
+template <typename T>		
+T card<T>::getValue() //returns card value
+{
 	return value;
 }
 
 template <typename T>
-void card<T>::setSuit(T s) {	//sets card suit
+void card<T>::setSuit(T s) //sets card suit
+{
 	suit = s;
 }
 
 template <typename T>
-T card<T>::getSuit() {	//returns card suit
+T card<T>::getSuit()	//returns card suit
+{	
 	return suit;
 }
 //End class card functions
@@ -74,14 +83,15 @@ public:
 		}
 		return os;
 	}
-	//void shuffle();
+	void shuffle(deck<T>&);
 private:
 	card<T> *front;
 	card<T> *curr;
 };
 
 template <typename T>
-deck<T>::deck() {
+deck<T>::deck() 
+{
 	front = NULL;
 	curr = front;
 	string suit, value;
@@ -111,7 +121,8 @@ deck<T>::deck() {
 }
 
 template <typename T>
-deck<T>::~deck(){
+deck<T>::~deck()
+{
 	if (front!=NULL) // List is not empty
 	{
 		curr = front;
@@ -126,11 +137,37 @@ deck<T>::~deck(){
 	}
 }
 
+
+template <typename T>
+void deck<T>::shuffle(deck<T>& d)	//causes memory error
+{
+	string suit, value;
+	card<T>* s = new card<T>;
+	s = d.front;
+	int ran;
+	srand(time(NULL));
+	for (int i = 0; i < 52; i++) {	//shuffles each card in the deck
+		ran = rand() % 52 + 1;
+		curr = d.front;
+		for (int j = 0; j < ran; j++) {	//move curr rand # of times
+			curr = curr->next;
+			curr->setValue(s->getValue());
+			curr->setSuit(s->getSuit());
+			s = front;
+			front = s->next;
+			delete s;
+		}
+	}
+}
+
 int main()
 {
 	card<string> c1;
 	cout << c1;
 
 	deck<string> d;
-	cout << d;
+	//cout << d << endl;
+	d.shuffle(d);
+	cout << d << endl;
+
 }
