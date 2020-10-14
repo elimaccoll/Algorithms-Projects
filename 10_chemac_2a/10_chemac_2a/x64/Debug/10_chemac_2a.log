@@ -1,0 +1,7 @@
+﻿  10_chemac_2a.cpp
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(226,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(226,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(222): message : while compiling class template member function 'void deck<std::string>::shuffle(void)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(273): message : see reference to function template instantiation 'void deck<std::string>::shuffle(void)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\10_chemac_2a\10_chemac_2a.cpp(265): message : see reference to class template instantiation 'deck<std::string>' being compiled
+  10_chemac_2a.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2a\x64\Debug\10_chemac_2a.exe
