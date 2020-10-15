@@ -1,0 +1,11 @@
+﻿  10_chemac_2b.cpp
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(240,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(164,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(150): message : while compiling class template member function 'deck<std::string>::deck(void)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(371): message : see reference to function template instantiation 'deck<std::string>::deck(void)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(371): message : see reference to class template instantiation 'deck<std::string>' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(170,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(240,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(236): message : while compiling class template member function 'void deck<std::string>::shuffle(void)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\10_chemac_2b\10_chemac_2b.cpp(375): message : see reference to function template instantiation 'void deck<std::string>::shuffle(void)' being compiled
+  10_chemac_2b.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_2b\Debug\10_chemac_2b.exe
