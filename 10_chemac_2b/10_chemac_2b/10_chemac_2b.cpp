@@ -1,14 +1,15 @@
-// Project 2 - Part A
+// Project 2 - Part B
 // Anthony Cherubino, Eli MacColl
 // 
-// Main program file for Project 2 - Part A. Contains the code to generate 
-//a deck of cards and shuffle it.
+// Main program file for Project 2 - Part B. Contains the code to play the 
+// card game flip.
 #include <iostream>
 #include <string>
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> 
+#include <sstream>
 using namespace std;
 
 //Class Declarations
@@ -18,21 +19,23 @@ class deck;
 
 template <typename T>
 class card
-	// card class contains the value and suit of a card as well as a pointer used
+	// card class contains the value, suit of a card, and if it has been flipped as well as a pointer used
 	// later to indicate the next card in the list.  Contains a default constructor 
 	// a constructor that takes the value and suit as parameters.  Also contains
-	// functions to set the suit, set the value, return the suit, and return the
-	// value of a card.  Has an overloaded operator << to print out a card's value
+	// functions to set the suit, set the value, set the flip status, return the suit, return the
+	// value, and return the flip status of a card.  Has an overloaded operator << to print out a card's value
 	// and suit to the user.
 {
 	friend class deck<T>;
 public:
 	card();
-	card(card<T>&, card<T>&);
+	card(const card<T>&);
 	void setValue(T);
 	void setSuit(T);
+	void setFlip(bool);
 	T getValue();
 	T getSuit();
+	bool getFlip();
 	friend ostream& operator<<(ostream& os, const card<T>& c)
 		// overloads << operator to print out a single card's value and suit
 	{
@@ -42,6 +45,9 @@ public:
 	card<T>* next;
 private:
 	T value, suit;
+
+	// flip status of card starts as false
+	bool flipped = false;
 };
 
 // card class member functions
@@ -56,12 +62,13 @@ card<T>::card()
 	next = NULL;
 }
 
-template <typename T>					//copy constructor?
-card<T>::card(card<T>& c1, card<T>& c2)	//not sure if this is what this is supposed to be
-// card constructor that takes value and suit as parameters and initializes
-// the card's value and suit and sets next pointer to NULL.
+template <typename T>					
+card<T>::card(const card<T>& c2)	
+// card copy constructor that initializes the card's value and suit based on
+// an existing card.
 {
-	c1 = c2;
+	value = c2.value;
+	suit = c2.suit;
 }
 
 template <typename T>
@@ -93,6 +100,20 @@ T card<T>::getSuit()
 }
 
 template <typename T>
+void card<T>::setFlip(bool f)
+// Function that initializes the flip of a card
+{
+	flipped = f;
+}
+
+template <typename T>
+bool card<T>::getFlip()
+// Function that returns the flip status of a card
+{
+	return flipped;
+}
+
+template <typename T>
 card<T>& card<T>::operator=(card<T>& c) 
 // overloads = operator to copy a card value and suit to a different card
 {
@@ -109,10 +130,13 @@ class deck
 	// linked list that is created by the constructor in the following order, 
 	// (ace-king, club-diamond-heart-spade). deck class contains an overloaded 
 	// operator << that prints out the deck of cards in its current order. 
-	// There is also a function that shuffles the deck of cards linked list.
+	// There are also functions that shuffle the deck of cards linked list, 
+	// find a specific card based on its numeric index, add a new card to the end
+	// of the linked list, and return and remove the top card from the deck.
 {
 public:
 	deck();
+	deck(card<T>*);
 	~deck();
 	friend ostream& operator<<(ostream& os, const deck<T>& d)
 		// overloads << operator to print out deck of cards
@@ -120,6 +144,7 @@ public:
 		// declares a card pointer and points it to the front of the deck
 		card<T>* print;
 		print = d.front;
+		int numCard = 1;
 
 		// iterates through the deck of cards linked list by printing the value
 		// and suit of the card currently being pointed at by pointer print and
@@ -127,14 +152,16 @@ public:
 		// This continues through the end of the deck until the pointer reads NULL
 		while (print != NULL)
 		{
-			os << print->getValue() << " of " << print->getSuit() << "s" << endl;
+			os << numCard << ": " << print->getValue() << " of " << print->getSuit() << "s" << endl;
 			print = print->next;
+			numCard++;
 		}
 		return os;
 	}
 	void shuffle();
-	void deal();
-	void replace(card<T>);
+	card<T>* deal();
+	card<T>* findCard(int n);
+	void replace(card<T>*);
 private:
 	card<T>* front;
 	card<T>* curr;
@@ -200,6 +227,16 @@ deck<T>::deck()
 }
 
 template <typename T>
+deck<T>::deck(card<T>* firstCard)
+// constructor that creates a deck with a single card that is passed in 
+{
+	front = firstCard;
+	curr = front;
+	prev = front;
+	firstCard->next = NULL;
+}
+
+template <typename T>
 deck<T>::~deck()
 // destructor deletes the linked list when the program finishes executing
 {
@@ -239,8 +276,8 @@ void deck<T>::shuffle()
 	int ran;
 	srand(time(NULL));
 
-	// iterates through the deck 364 times to shuffle it 7 times
-	for (int x = 0; x < 364; x++)
+	// iterates through the deck to shuffle it 3 times
+	for (int x = 0; x < 156; x++)
 	{
 		// generates a random number from 0 to 51 for each time a card is shuffled 
 		// in the deck and resets the pointers to point at the front of the list each time
@@ -273,107 +310,172 @@ void deck<T>::shuffle()
 }
 
 template <typename T>
-void deck<T>::deal()
+card<T>* deck<T>::deal()
+// Function that returns the first card in the list and removes it from the list
 {
 	card<T>* top;
 	top = front;
 	front = front->next;
-	cout << top->getValue() << " " << top->getSuit() << endl;
-	delete top;
-	top = NULL;
+	return top;
 }
 
 template <typename T>
-void deck<T>::replace(card<T> c)
+card<T>* deck<T>::findCard(int n)
+// Function that finds and returns a card from the deck based on a given index
 {
-	curr = front;
-	prev = curr;
-	int count = 0;
-	do{
-		if (curr->getSuit() == c.suit && curr->getValue() == c.value) {
+	curr = this->front;
+	for (size_t i = 0; i < n - 1; i++)
+	{
+		curr = curr->next;
+	}
+	return curr;
+}
+
+template <typename T>
+void deck<T>::replace(card<T>* c)
+// Function that adds a passed in card to the end of the list
+{
+	curr->next = c;
+	c->next = NULL;
+	curr = curr->next;
+}
+template <typename T>
+void playFlip(deck<T>* flipDeck)
+// Function which begins play of the flip game
+{
+	string input;
+	int n;
+	bool repeat;
+	bool exit = false;
+	int points = 0;
+	int flipped = 0;
+	cout << "Points: " << points << endl;
+
+	while (!exit) {
+		
+		// check if all 24 cards have already been flipped and if so end the game
+		if (flipped == 24) {
+			cout << "\nAll cards have been flipped!" << endl;
 			break;
 		}
-		curr = curr->next;
-		count++;
-	} while (curr != NULL);
+		
+		do
+		{
+			// prompt user for card to flip
+			cout << "\nSelect a card (1 - 24) to flip or 0 to stop: ";
 
-	if (count != 51)		//makes sure card isn't already at the back (maybe test at some point)
-	{
-		for (int i = 1; i < count; i++) {
-			prev = prev->next;
+			getline(cin, input);
+
+			// if there is an invalid input this will catch the error and return -1
+			try
+			{
+				n = stoi(input);
+			}
+			catch (...)
+			{
+				// if input is invalid, set n to -1 so prompt will repeat
+				n = -1;
+			}
+
+			// exit game if user enters 0
+			if (n == 0)
+			{
+				exit = true;
+				repeat = false;
+			}
+			
+			// repeat prompt if value entered is less than 1 or greater than 24
+			else if (n < 1 || n > 24)
+			{
+				cout << "Invalid card!" << endl;
+				repeat = true;
+			}
+			else
+			{
+				repeat = false;
+			}
+
+		} while (repeat);
+
+		// if exit is true form either user input or flipping all cards, quit the game
+		if (exit) {
+			break;
 		}
 
-		card<T>* copy = new card<T>();
-		copy->setSuit(curr->getSuit());
-		copy->setValue(curr->getValue());
+		// get pointer to card that user has selected
+		card<string>* inFlip;
+		inFlip = flipDeck->findCard(n);
+		
+		// check if card has already been flipped
+		if (!inFlip->getFlip())
+		{
+			inFlip->setFlip(true);
 
-		curr = curr->next;		//not sure what this means, certain cases may cause error
-		delete prev->next;
-		prev->next = NULL;
-		prev->next = curr;
+			string flipVal = inFlip->getValue();
+			string flipSuit = inFlip->getSuit();
 
-		while (curr->next != NULL) {
-			curr = curr->next;
+			// output value of flipped card
+			cout << "Card " << n << ": " << flipVal << " of " << flipSuit << "s" << endl;
+
+			// calculate change in user score
+			if (flipVal == "Ace")
+			{
+				points += 10;
+			}
+			else if (flipVal == "King" || flipVal == "Queen" || flipVal == "Jack")
+			{
+				points += 5;
+			}
+			else if (flipVal == "7")
+			{
+				points /= 2;
+			}
+			else if (flipVal == "2" || flipVal == "3" || flipVal == "4" || flipVal == "5" || flipVal == "6")
+			{
+				points = 0;
+			}
+
+			if (flipSuit == "Heart")
+			{
+				points += 1;
+			}
+			cout << "Points: " << points << endl;
+
+			flipped++;
 		}
-
-		curr->next = copy;
+		else
+		{
+			cout << "Card already flipped!" << endl;
+		}
 	}
+
+	// when game exits output final score
+	cout << "\nYou got a score of: " << points << endl;
+
 }
 
 int main()
-// At this point, the main function is only used to initialize a deck of cards 
-// and print it out before and after being shuffled
+// Main function that initiates play of the game
 {
-	// declares d deck object which generates a sorted deck of cards with
-	// its constructor 
-	/*
-	deck<string> d;
-
-	cout << "Deck before shuffle: " << endl;
-
-	// utilizes overloaded operator << to print out the deck of cards
-	cout << d << endl;
-
-	// calls shuffle function to shuffle deck d
-	d.shuffle();
-
-	cout << "Deck after shuffle: " << endl;
-
-	// uses overloaded operator << to print out the shuffled deck
-	cout << d << endl;
-	*/
-
-	/*	
-	//testing overloaded = operator and copy constructor
-	card<string> card1;
-	card<string> card2;
-	card1.setSuit("Heart");
-	card1.setValue("7");
-	cout << card1;
-	cout << card2;
-	//card<string>(card1, card2);		//these two 
-	card1 = card2;						//do the same thing
-	cout << card1;
-	cout << card2;
-	*/
-	/*
-	//testing deal function
-	deck<string> d;
-	d.shuffle();
-	cout << d << endl;
-	cout << "Dealt card: " << endl;
-	d.deal();
-	cout << "\n";
-	cout << d << endl;
-	*/
-
-	//testing replace function
-	deck <string> d;
-	card<string> card1;
-	card1.setSuit("Heart");
-	card1.setValue("7");
-	d.shuffle();
-	cout << d << endl;
-	d.replace(card1);
-	cout << d << endl;
+	// create and shuffle deck and output the results to the user
+	deck<string> shuffleDeck;
+	cout << "Deck:\n" << shuffleDeck << endl;
+	shuffleDeck.shuffle();
+	cout << "Deck (Shuffled):\n" << shuffleDeck << endl;
+	
+	//draw 24 cards to be used for the game and output results to the user
+	deck<string> drawDeck(shuffleDeck.deal());
+	
+	for (size_t i = 0; i < 23; i++)
+	{
+		drawDeck.replace(shuffleDeck.deal());
+	}
+	
+	cout << "Not Drawn:\n" << shuffleDeck << endl;
+	cout << "Drawn:\n" << drawDeck << endl;
+	
+	// begin play of the game
+	playFlip(&drawDeck);
+	
+	return 0;
 }
