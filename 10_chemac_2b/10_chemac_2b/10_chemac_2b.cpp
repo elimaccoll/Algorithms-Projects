@@ -152,7 +152,13 @@ public:
 		// This continues through the end of the deck until the pointer reads NULL
 		while (print != NULL)
 		{
-			os << numCard << ": " << print->getValue() << " of " << print->getSuit() << "s" << endl;
+			
+			os << numCard << ": " << print->getValue() << " of " << print->getSuit() << "s";
+			if (print->getFlip())
+			{
+				os << " - Flipped";
+			}
+			os << endl;
 			print = print->next;
 			numCard++;
 		}
@@ -349,10 +355,12 @@ void playFlip(deck<T>* flipDeck)
 	bool exit = false;
 	int points = 0;
 	int flipped = 0;
-	cout << "Points: " << points << endl;
 
 	while (!exit) {
 		
+		// print out current hand
+		cout << "Drawn:\n" << *flipDeck << endl;
+
 		// check if all 24 cards have already been flipped and if so end the game
 		if (flipped == 24) {
 			cout << "\nAll cards have been flipped!" << endl;
@@ -472,7 +480,6 @@ int main()
 	}
 	
 	cout << "Not Drawn:\n" << shuffleDeck << endl;
-	cout << "Drawn:\n" << drawDeck << endl;
 	
 	// begin play of the game
 	playFlip(&drawDeck);
