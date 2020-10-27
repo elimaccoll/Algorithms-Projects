@@ -1,14 +1,14 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (10_chemac_1c.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   10_chemac_3a.cpp
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(66,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(160,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(178,21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(210,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(211,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(224,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(248,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(357,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(380,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(404,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\10_chemac_1c\10_chemac_3a.cpp(409,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  10_chemac_1c.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_1c\x64\Debug\10_chemac_3a.exe
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(66,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(160,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(178,21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(202,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(203,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(216,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(240,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(349,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(372,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(396,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(401,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  10_chemac_1c.vcxproj -> C:\Users\atche\Source\Repos\acherubino\EECE2560\10_chemac_3a\x64\Debug\10_chemac_3a.exe

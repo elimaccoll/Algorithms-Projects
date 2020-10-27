@@ -195,15 +195,7 @@ void findMatches(dictionary wordDict, grid letterGrid)
 		{
 			string baseLetter;
 			baseLetter += letterGrid.getAt(i, j);
-			/* I believe this adds single letter words, which we don't need
-			if (wordDict.checkDict(baseLetter))
-			{
-				if (find(foundWords.begin(), foundWords.end(), baseLetter) == foundWords.end())
-				{
-					foundWords.push_back(baseLetter);
-				}
-			}
-			*/
+
 			for (size_t dir = 0; dir < 8; dir++)
 			{
 				string wordBuilder = baseLetter;
