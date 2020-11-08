@@ -24,7 +24,7 @@
     <ProjectGuid>{2dffd6ad-7c8a-40b7-a3bf-d327cabd4e48}</ProjectGuid>
     <RootNamespace>My10chemac1c</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>10_chemac_3a</ProjectName>
+    <ProjectName>10_chemac_3b</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="10_chemac_3a.cpp" />
+    <ClCompile Include="10_chemac_3b.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="d_except.h" />

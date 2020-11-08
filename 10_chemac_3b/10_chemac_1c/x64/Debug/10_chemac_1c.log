@@ -1,15 +1,28 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (10_chemac_1c.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  10_chemac_3a.cpp
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(66,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(95,36): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(190,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(208,21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(232,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(233,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(246,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(270,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(379,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(402,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(426,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\10_chemac_1c\10_chemac_3a.cpp(431,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  10_chemac_1c.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3a\x64\Debug\10_chemac_3a.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (10_chemac_1c.vcxproj, 10_chemac_3a.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  10_chemac_3b.cpp
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(66,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(307,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(325,21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(349,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(350,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(363,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(387,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(496,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(519,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(543,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(548,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(588,72): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(275,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(273): message : while compiling class template member function 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(207): message : see reference to function template instantiation 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(205): message : while compiling class template member function 'heap<std::string>::heap(std::vector<std::string,std::allocator<std::string>> &)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(596): message : see reference to function template instantiation 'heap<std::string>::heap(std::vector<std::string,std::allocator<std::string>> &)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(596): message : see reference to class template instantiation 'heap<std::string>' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(276,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(265,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(264): message : while compiling class template member function 'void heap<std::string>::buildMaxHeap(std::vector<std::string,std::allocator<std::string>> &)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(274): message : see reference to function template instantiation 'void heap<std::string>::buildMaxHeap(std::vector<std::string,std::allocator<std::string>> &)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(273): message : while compiling class template member function 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(207): message : see reference to function template instantiation 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(267,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  10_chemac_1c.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\x64\Debug\10_chemac_3b.exe

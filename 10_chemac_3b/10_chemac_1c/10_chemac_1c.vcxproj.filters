@@ -43,7 +43,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="10_chemac_3a.cpp">
+    <ClCompile Include="10_chemac_3b.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
