@@ -1,4 +1,4 @@
-// Project 3 - Part A
+// Project 3 - Part B
 // Anthony Cherubino, Eli MacColl
 // 
 // Main program file for Project 3 - Part B. Contains the code to play the 
@@ -140,7 +140,6 @@ void dictionary::selectionSort()
 // Function that sorts the dictionary vector alphabetically using a selection sort
 {
 	size_t vecSize = words.size();
-	cout << "\nSorting dictionary alphabetically: " << endl;
 	cout << vecSize;
 
 	for (size_t j = 0; j < vecSize - 1; ++j) {
@@ -232,10 +231,7 @@ T heap<T>::getItem(int i) //not sure if this is all we do for this
 }
 
 template <typename T>
-void heap<T>::initializeMaxHeap()
-{
-	//works without using this, I didn't know what to put here
-}
+void heap<T>::initializeMaxHeap() {}
 
 template <typename T>
 void heap<T>::maxHeapify(vector<T>& words, int i, int size)
@@ -335,6 +331,8 @@ void findMatches(dictionary wordDict, grid letterGrid)
 	vector<string> foundWords;
 	size_t rows = letterGrid.getRows();
 	size_t cols = letterGrid.getCols();
+
+	cout << "\nSearching..." << endl;
 
 	for (size_t i = 0; i < rows; i++)
 	{
@@ -580,11 +578,11 @@ void search(int s)
 	switch (s)
 	{
 	case 1:
-		cout << "\nSorting with selection sort:";
+		cout << "\nSorting with selection sort:" << endl;
 		searchDict.selectionSort();
 		break;
 	case 2:
-		cout << "\nSorting with quicksort:";
+		cout << "\nSorting with quicksort:" << endl;
 		searchDict.quicksort(searchDict.words, 0, searchDict.words.size() - 1);
 		for (string x : searchDict.words)
 		{
@@ -592,7 +590,7 @@ void search(int s)
 		}
 		break;
 	case 3:
-		cout << "\nSorting with heapsort:";
+		cout << "\nSorting with heapsort:" << endl;
 		heap<string> sort(searchDict.words);
 		searchDict.words = sort.heap<string>::copyOut();
 		for (string x : searchDict.words)
@@ -602,11 +600,31 @@ void search(int s)
 		break;
 	}
 
-	cout << "\nEnter grid file name: ";
-	string input;
-	cin >> input;
+	int err = 0;
+	string gridPath;
 
-	grid wordSearch(input);
+	do
+	{
+		cout << "\nEnter grid file name: ";
+		err = 0;
+
+		cin >> gridPath;
+
+		if (err != -1)
+		{
+			ifstream testIn(gridPath);
+
+			if (!testIn)
+			{
+				err = -1;
+				cout << "ERROR - File could not be opened!";
+			}
+		}
+
+
+	} while (err != 0);
+
+	grid wordSearch(gridPath);
 	cout << wordSearch;
 
 	findMatches(searchDict, wordSearch);
