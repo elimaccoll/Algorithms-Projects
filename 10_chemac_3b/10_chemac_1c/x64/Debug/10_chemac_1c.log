@@ -1,28 +1,28 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (10_chemac_1c.vcxproj, 10_chemac_3a.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   10_chemac_3b.cpp
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(66,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(304,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(322,21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(348,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(349,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(362,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(386,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(495,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(518,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(542,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(547,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(587,72): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(272,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(270): message : while compiling class template member function 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)'
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(207): message : see reference to function template instantiation 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)' being compiled
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(205): message : while compiling class template member function 'heap<std::string>::heap(std::vector<std::string,std::allocator<std::string>> &)'
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(595): message : see reference to function template instantiation 'heap<std::string>::heap(std::vector<std::string,std::allocator<std::string>> &)' being compiled
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(595): message : see reference to class template instantiation 'heap<std::string>' being compiled
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(273,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(262,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(261): message : while compiling class template member function 'void heap<std::string>::buildMaxHeap(std::vector<std::string,std::allocator<std::string>> &)'
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(271): message : see reference to function template instantiation 'void heap<std::string>::buildMaxHeap(std::vector<std::string,std::allocator<std::string>> &)' being compiled
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(270): message : while compiling class template member function 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)'
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(207): message : see reference to function template instantiation 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)' being compiled
-C:\Users\atche\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(264,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  10_chemac_1c.vcxproj -> C:\Users\atche\Source\Repos\acherubino\EECE2560\10_chemac_3b\x64\Debug\10_chemac_3b.exe
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(67,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(321,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(339,21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(365,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(366,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(379,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(403,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(512,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(535,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(559,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(564,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(605,72): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(287,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(285): message : while compiling class template member function 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(210): message : see reference to function template instantiation 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(208): message : while compiling class template member function 'heap<std::string>::heap(std::vector<std::string,std::allocator<std::string>> &)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(609): message : see reference to function template instantiation 'heap<std::string>::heap(std::vector<std::string,std::allocator<std::string>> &)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(609): message : see reference to class template instantiation 'heap<std::string>' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(288,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(275,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(274): message : while compiling class template member function 'void heap<std::string>::buildMaxHeap(std::vector<std::string,std::allocator<std::string>> &)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(286): message : see reference to function template instantiation 'void heap<std::string>::buildMaxHeap(std::vector<std::string,std::allocator<std::string>> &)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(285): message : while compiling class template member function 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)'
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(210): message : see reference to function template instantiation 'void heap<std::string>::heapsort(std::vector<std::string,std::allocator<std::string>> &)' being compiled
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\10_chemac_1c\10_chemac_3b.cpp(277,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  10_chemac_1c.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_3b\x64\Debug\10_chemac_3b.exe

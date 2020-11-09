@@ -1,8 +1,15 @@
 // Project 3 - Part B
 // Anthony Cherubino, Eli MacColl
 // 
-// Main program file for Project 3 - Part B. Contains the code to play the 
-// card game flip.
+// Main program file for Project 3 - Part B. Contains the code to sort the
+// dictionary file with selection sort, quicksort, or heapsort and then initiate
+// the word search, which uses binary search
+
+// Efficiency times (VS release mode):
+// Selection sort : ~45 seconds
+// Quicksort: Effectively instant
+// Heapsort: Effectively instant
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -15,8 +22,8 @@ using namespace std;
 
 class dictionary
 	// Dictionary class contains a vector of words read in from a file. Constructor reads
-	// strings in from a passed in file into a vector and sorts them using the selection sort
-	// member function. Also contains a function to search through the vector for a specific
+	// strings in from a passed in file into a vector and prints the unsorted vector of words.
+	// Also contains a function to search through the vector for a specific
 	// passed in word and an overloaded << operator which prints out the list of words.
 {
 public:
@@ -76,6 +83,13 @@ private:
 
 template <typename T>
 class heap
+	// Heap template class contains a constructor that takes the unsorted vector of words in 
+	// from the dictionary class and sorts them using the heapsort member function. It also
+	// contains functions, parent, left, right, and getItem which are used to navigate the
+	// heap. There are also the initializeMaxHeap, maxHeapify, and buildMaxHeap functions
+	// which establish the heap and carryout the sorting process according to the heapsort
+	// funciton. Also contains a copyOut function to update the dictionary class vector
+	// of words with the newly sorted vector of words
 {
 public:
 	heap(vector<T>&);
@@ -109,15 +123,11 @@ ostream& operator<<(ostream& os, const vector<string> strVec);
 
 dictionary::dictionary(string dictPath)
 // Constructor for dictionary class that is passed in a string containing the path
-// to a dictionary text file. The words from this file are stored in a vector and
-// sorted alphabetically
+// to a dictionary text file. The unsorted words from this file are stored in a vector
+// and printed
 {
 	words = inputDict(dictPath);
 	cout << *this;
-	//selectionSort();
-	//quicksort(words, 0, words.size()-1);
-
-
 }
 
 bool dictionary::checkDict(string word)
@@ -160,8 +170,6 @@ void dictionary::selectionSort()
 			swap(words.at(j), words.at(min));
 		}
 	}
-
-	cout << "\rDone!";
 }
 
 void dictionary::quicksort(vector<string>& words, int left, int right)
@@ -201,6 +209,8 @@ int dictionary::partition(vector<string>& words, int p, int r)
 
 template <typename T>
 heap<T>::heap(vector<T>& in)
+// Function that takes in the vector of unsorted words from the dictionary class
+// and has it sorted alphabetically using heapsort
 {
 	words = in;
 	heapsort(words);
@@ -208,24 +218,28 @@ heap<T>::heap(vector<T>& in)
 
 template <typename T>
 int heap<T>::parent(int i)
+// Function that returns the index of the parent node of words[i]
 {
 	return floor(i / 2);
 }
 
 template <typename T>
 int heap<T>::left(int i)
+// Function that returns the index of the left child node of words[i]
 {
 	return ((2 * i) + 1);
 }
 
 template <typename T>
 int heap<T>::right(int i)
+// Function that returns the index of the right child node of words[i]
 {
 	return ((2 * i) + 2);
 }
 
 template <typename T>
-T heap<T>::getItem(int i) //not sure if this is all we do for this
+T heap<T>::getItem(int i)
+// Function that returns the value of the node at index i
 {
 	return words.at(i);
 }
@@ -235,11 +249,15 @@ void heap<T>::initializeMaxHeap() {}
 
 template <typename T>
 void heap<T>::maxHeapify(vector<T>& words, int i, int size)
+// Function that is part of the heapsort algorithm that checks if node i meets 
+// the heap property for a max heap
 {
 	int largest;
 	l = left(i);
 	r = right(i);
 
+	// Checks if the heap meets the heap property in order to find the largest
+	// value index among i, l and r
 	if (l < size && words[l] > words[i])
 		largest = l;
 	else
@@ -248,6 +266,7 @@ void heap<T>::maxHeapify(vector<T>& words, int i, int size)
 	if (r < size && words[r] > words[largest])
 		largest = r;
 
+	// float down, this means that node i did not meet heap property for max heap
 	if (largest != i)
 	{
 		std::swap(words[i], words[largest]);
@@ -257,6 +276,7 @@ void heap<T>::maxHeapify(vector<T>& words, int i, int size)
 
 template <typename T>
 void heap<T>::buildMaxHeap(vector<T>& words)
+// Function that builds a max heap from the inputted, unsorted vector of words
 {
 	for (int i = (words.size() / 2); i >= 0; i--)
 	{
@@ -266,6 +286,8 @@ void heap<T>::buildMaxHeap(vector<T>& words)
 
 template <typename T>
 void heap<T>::heapsort(vector<T>& words)
+// Function that uses heapsort algorithm to sort a vector of unsorted words
+// alphabeticall and in-place
 {
 	buildMaxHeap(words);
 	int sz = words.size();
@@ -279,6 +301,8 @@ void heap<T>::heapsort(vector<T>& words)
 
 template <typename T>
 vector<T> heap<T>::copyOut()
+// Function that returns the sorted vector of words so that it can be copied
+// out and used by the dictionary class for the binary search
 {
 	return words;
 }
@@ -569,7 +593,8 @@ void findMatches(dictionary wordDict, grid letterGrid)
 }
 
 void search(int s)
-// Function initializes dictionary from file, prompts user to enter file name
+// Function initializes dictionary from file, sorts the words in the dictionary file
+// using the algorithm that the user selected. Then prompts user to enter file name
 // to be used to initialize grid, and initiates search
 {
 	dictionary searchDict("dictionary.txt");
@@ -584,21 +609,16 @@ void search(int s)
 	case 2:
 		cout << "\nSorting with quicksort:" << endl;
 		searchDict.quicksort(searchDict.words, 0, searchDict.words.size() - 1);
-		for (string x : searchDict.words)
-		{
-			cout << x << endl;
-		}
 		break;
 	case 3:
 		cout << "\nSorting with heapsort:" << endl;
 		heap<string> sort(searchDict.words);
 		searchDict.words = sort.heap<string>::copyOut();
-		for (string x : searchDict.words)
-		{
-			cout << x << endl;
-		}
 		break;
 	}
+
+	// Prints out vector of sorted words
+	cout << searchDict.words << endl;
 
 	int err = 0;
 	string gridPath;
@@ -646,7 +666,8 @@ ostream& operator<<(ostream& os, const vector<string> strVec)
 // main function
 
 int main()
-// main function initiates word search
+// main function that prompts the user to select a sorting algorithm and sorts the
+// dictionary file using the selected algorithm before initiating the word search
 {
 	int sel = 0;
 	while (sel < 1 || sel>3) {
