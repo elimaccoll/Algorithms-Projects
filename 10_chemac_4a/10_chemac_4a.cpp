@@ -1,9 +1,9 @@
 // Project 4 - Part A
 // Anthony Cherubino, Eli MacColl
 // 
-// Main program file for Project 4 - Part A. Contains the code to sort the
-// dictionary file with selection sort, quicksort, or heapsort and then initiate
-// the word search, which uses binary search *******UPDATE*******
+// Main program file for Project 4 - Part A. Contains the code to read in Sudoku
+// puzzles and check if there are any conflicts in their number positions and if
+// the puzzle is solved.
 
 #include <iostream>
 #include <limits.h>
@@ -260,6 +260,7 @@ void board::updateConflicts()
 {
 	conflicts.clear();
 
+	// checks for conflicts in each column
 	for (size_t j = 1; j < BoardSize + 1; j++)
 	{
 		vector<int> column;
@@ -295,6 +296,7 @@ void board::updateConflicts()
 		conflicts.push_back(dupes);
 	}
 
+	// checks for conflicts in each row
 	for (size_t i = 1; i < BoardSize + 1; i++)
 	{
 		vector<int> row;
@@ -330,6 +332,7 @@ void board::updateConflicts()
 		conflicts.push_back(dupes);
 	}
 
+	// checks for conflicts in each square
 	for (size_t x = 0; x < BoardSize; x++)
 	{
 		vector<int> square;
