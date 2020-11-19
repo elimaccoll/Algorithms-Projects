@@ -1,0 +1,12 @@
+﻿  10_chemac_4a.cpp
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(172,8): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(270,7): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(272,29): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(292,5): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(306,7): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(308,26): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(328,5): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(344,8): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(346,30): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\10_chemac_4a.cpp(367,5): warning C4834: discarding return value of function with 'nodiscard' attribute
+  10_chemac_4a.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\x64\Debug\10_chemac_4a.exe

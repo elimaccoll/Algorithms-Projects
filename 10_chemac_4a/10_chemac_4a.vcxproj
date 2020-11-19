@@ -151,6 +151,7 @@
     <Text Include="sudoku3.txt" />
     <Text Include="sudoku4.txt" />
     <Text Include="sudoku5.txt" />
+    <Text Include="sudoku.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,2 @@
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\x64\Debug\10_chemac_4a.exe
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4a\x64\Debug\10_chemac_4a.pdb

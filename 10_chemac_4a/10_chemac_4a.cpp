@@ -171,17 +171,17 @@ bool board::isSolved()
 			{
 				if (isBlank(i,j))
 				{
-					cout << "\nNot Solved";
+					cout << "\nNot Solved"<<endl;
 					return false;
 				}
 			}
 		}
-		cout << "\nSolved";
+		cout << "\nSolved"<<endl;
 		return true;
 	}
 	else
 	{
-		cout << "\nNot Solved";
+		cout << "\nNot Solved"<<endl;
 		return false;
 	}
 }
@@ -377,7 +377,7 @@ int main()
 	ifstream fin;
 
 	// Read the sample grid from the file.
-	string fileName = "sudoku1.txt";
+	string fileName = "sudoku.txt";
 
 	fin.open(fileName.c_str());
 	if (!fin)

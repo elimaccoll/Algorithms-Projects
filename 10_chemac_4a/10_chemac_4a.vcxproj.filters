@@ -43,5 +43,8 @@
     <Text Include="sudoku5.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="sudoku.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
