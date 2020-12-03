@@ -1,0 +1,64 @@
+﻿  10_chemac_4b.cpp
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(179,8): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(279,7): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(281,29): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(301,5): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(315,7): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(317,26): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(337,5): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(353,8): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(355,30): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(376,5): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(394,7): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(396,23): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(397,23): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(417,7): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(423,21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(428,23): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(433,24): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(458,37): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(460,7): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(473,38): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(475,23): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(476,23): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(482,36): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(483,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(484,59): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(511,38): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(513,23): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(514,23): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(533,34): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\10_chemac_4b.cpp(538,15): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  10_chemac_4b.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\x64\Debug\10_chemac_4b.exe
