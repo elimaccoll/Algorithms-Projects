@@ -1,10 +1,10 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (10_chemac_4b.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   10_chemac_5a.cpp
-C:\Users\Eli PC\source\repos\10_chemac_5a\graph.h(639,23): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Eli PC\source\repos\10_chemac_5a\10_chemac_5a.cpp(272,10): warning C4101: 'x': unreferenced local variable
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5a\graph.h(639,23): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5a\10_chemac_5a.cpp(473,10): warning C4101: 'x': unreferenced local variable
   Generating code
-  738 of 753 functions (98.0%) were compiled, the rest were copied from previous compilation.
+  4 of 811 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     2 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  10_chemac_4b.vcxproj -> C:\Users\Eli PC\source\repos\10_chemac_5a\x64\Release\10_chemac_5a.exe
+  10_chemac_4b.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5a\x64\Release\10_chemac_5a.exe

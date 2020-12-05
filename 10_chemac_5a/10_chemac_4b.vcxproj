@@ -148,12 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Downloads\graph.h" />
-    <None Include="..\..\..\Downloads\maze1.txt" />
-    <None Include="..\..\..\Downloads\maze2.txt" />
-    <None Include="..\..\..\Downloads\maze3.txt" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="maze.txt" />
+    <Text Include="maze1.txt" />
+    <Text Include="maze2.txt" />
+    <Text Include="maze3.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -31,18 +31,18 @@
     <None Include="..\..\..\Downloads\graph.h">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="..\..\..\Downloads\maze1.txt">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\..\Downloads\maze2.txt">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\..\Downloads\maze3.txt">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="maze.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="maze1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="maze2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="maze3.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
