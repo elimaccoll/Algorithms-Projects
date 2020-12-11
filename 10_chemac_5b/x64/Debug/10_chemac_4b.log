@@ -1,0 +1,7 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (10_chemac_4b.vcxproj, 10_chemac_5a.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  10_chemac_5b.cpp
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5b\graph.h(639,23): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5b\10_chemac_5b.cpp(640,5): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5b\10_chemac_5b.cpp(650,5): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5b\10_chemac_5b.cpp(662,10): warning C4101: 'x': unreferenced local variable
+  10_chemac_4b.vcxproj -> C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5b\x64\Debug\10_chemac_5b.exe

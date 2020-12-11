@@ -1,0 +1,4 @@
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_4b\x64\Release\10_chemac_4b.exe
+C:\Users\Eli PC\source\repos\10_chemac_4b\x64\Release\10_chemac_5a.exe
+C:\Users\Eli PC\source\repos\10_chemac_5a\x64\Release\10_chemac_5a.exe
+C:\Users\Eli PC\source\repos\acherubino\EECE2560\10_chemac_5a\x64\Release\10_chemac_5a.exe
